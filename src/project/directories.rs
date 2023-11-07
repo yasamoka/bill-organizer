@@ -14,6 +14,7 @@ pub struct Directories {
 pub struct Directory {
     #[serde(rename(serialize = "@id"))]
     pub id: i32,
+
     #[serde(rename(serialize = "@path"))]
     pub path: PathBuf,
 }

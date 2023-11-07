@@ -11,8 +11,10 @@ pub struct Files {
 pub struct File {
     #[serde(rename(serialize = "@dirId", deserialize = "dirId"))]
     pub dir_id: u32,
+
     #[serde(rename(serialize = "@id"))]
     pub id: u32,
+
     #[serde(rename(serialize = "@name"))]
     pub name: String,
 }

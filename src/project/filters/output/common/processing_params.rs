@@ -7,6 +7,7 @@ use serde_with::{serde_as, BoolFromInt};
 pub struct ProcessingParams {
     #[serde(rename(serialize = "@autoZonesFound", deserialize = "autoZonesFound"))]
     pub auto_zones_found: u32,
+
     #[serde(rename(
         serialize = "@blackOnWhiteSetManually",
         deserialize = "blackOnWhiteSetManually"

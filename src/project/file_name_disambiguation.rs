@@ -11,6 +11,7 @@ pub struct FileNameDisambiguation {
 pub struct Mapping {
     #[serde(rename(serialize = "@file"))]
     pub file: u32,
+
     #[serde(rename(serialize = "@label"))]
     pub label: String,
 }

@@ -19,14 +19,19 @@ pub struct Output {
 pub struct Page {
     #[serde(rename(serialize = "@id"))]
     pub id: u32,
+
     pub zones: Zones,
+
     #[serde(rename = "fill-zones")]
     pub fill_zones: FillZones,
+
     #[validate]
     pub params: Params,
+
     #[serde(rename = "processing-params")]
     pub processing_params: ProcessingParams,
-    #[serde(rename = "output-params")]
+
+    #[serde(rename = "output-params", skip_serializing_if = "Option::is_none")]
     #[validate]
-    pub output_params: OutputParams,
+    pub output_params: Option<OutputParams>,
 }
