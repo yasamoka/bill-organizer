@@ -19,7 +19,7 @@ impl<'de> Deserialize<'de> for Outline {
         #[derive(Deserialize)]
         #[serde(deny_unknown_fields)]
         pub struct S {
-            pub point: Option<[Point; 5]>,
+            pub point: Option<Vec<Point>>,
         }
 
         let s = S::deserialize(deserializer)?;
@@ -33,8 +33,8 @@ impl<'de> Deserialize<'de> for Outline {
 #[derive(Serialize, Deserialize, Validate, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct FilledOutline {
-    #[validate(custom = "validate_outline")]
-    pub point: [Point; 5],
+    #[validate(length(min = 5, max = 6), custom = "validate_outline")]
+    pub point: Vec<Point>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -50,7 +50,7 @@ impl Validate for Outline {
     }
 }
 
-fn validate_outline(points: &[Point; 5]) -> Result<(), ValidationError> {
+fn validate_outline(points: &Vec<Point>) -> Result<(), ValidationError> {
     (points.first().unwrap() == points.last().unwrap())
         .then(|| ())
         .ok_or_else(|| ValidationError::new("invalid outline: first & last points do not match"))
