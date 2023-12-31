@@ -178,6 +178,7 @@ pub struct Dependencies {
 #[serde(deny_unknown_fields)]
 #[serde(rename_all = "kebab-case")]
 pub enum LayoutType {
+    AutoDetect,
     SingleUncut,
     SingleCut,
     TwoPages,
