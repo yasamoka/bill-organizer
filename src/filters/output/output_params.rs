@@ -5,7 +5,7 @@ use serde_with::{
 };
 use validator::{Validate, ValidationError};
 
-use crate::project::filters::common::NonNegativeRegionRect;
+use crate::filters::common::NonNegativeRegionRect;
 
 use super::{
     super::super::common::{IntSize, DPI},
@@ -200,7 +200,7 @@ mod test {
     use serde_xml_rs::from_str;
     use validator::Validate;
 
-    use crate::project::ProjectXML;
+    use crate::ProjectXML;
 
     #[test]
     fn it_validates_output_params() {

@@ -126,7 +126,7 @@ impl<'de> Deserialize<'de> for DistortionModel {
 mod test {
     use serde_xml_rs::from_str;
 
-    use crate::project::ProjectXML;
+    use crate::ProjectXML;
 
     use super::DistortionModel;
 

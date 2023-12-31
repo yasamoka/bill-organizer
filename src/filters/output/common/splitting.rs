@@ -29,7 +29,7 @@ pub enum SplittingMode {
 mod test {
     use serde_xml_rs::from_str;
 
-    use crate::project::{filters::output::common::splitting::SplittingMode, ProjectXML};
+    use crate::{filters::output::common::splitting::SplittingMode, ProjectXML};
 
     #[test]
     fn it_deserializes_splitting_mode() {

@@ -192,7 +192,7 @@ pub struct ColorSegmenterOptions {
 mod test {
     use serde_xml_rs::from_str;
 
-    use crate::project::{
+    use crate::{
         filters::output::common::color_params::{BinarizationMethod, ColorMode, FillingColor},
         ProjectXML,
     };

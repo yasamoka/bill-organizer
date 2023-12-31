@@ -32,7 +32,7 @@ pub enum DewarpingMode {
 mod test {
     use serde_xml_rs::from_str;
 
-    use crate::project::{filters::output::common::dewarping_options::DewarpingMode, ProjectXML};
+    use crate::{filters::output::common::dewarping_options::DewarpingMode, ProjectXML};
 
     #[test]
     fn it_deserializes_dewarping_mode() {

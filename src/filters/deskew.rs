@@ -60,7 +60,7 @@ mod test {
     use serde_xml_rs::from_str;
     use validator::Validate;
 
-    use crate::project::{filters::deskew::Mode, ProjectXML};
+    use crate::{filters::deskew::Mode, ProjectXML};
 
     #[test]
     fn it_validates_angle() {

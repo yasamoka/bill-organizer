@@ -1,7 +1,7 @@
 use serde::{de, Deserialize, Serialize};
 use validator::{Validate, ValidationError};
 
-use crate::project::common::{IntSize, Point};
+use crate::common::{IntSize, Point};
 
 use super::common::{FilledOutline, Rotation};
 
@@ -188,7 +188,7 @@ mod test {
     use serde_xml_rs::from_str;
     use validator::Validate;
 
-    use crate::project::{
+    use crate::{
         filters::page_split::{Image, LayoutType, Mode, Pages},
         ProjectXML,
     };

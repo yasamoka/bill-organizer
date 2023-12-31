@@ -33,9 +33,7 @@ pub enum PictureShape {
 mod test {
     use serde_xml_rs::from_str;
 
-    use crate::project::{
-        filters::output::common::picture_shape_options::PictureShape, ProjectXML,
-    };
+    use crate::{filters::output::common::picture_shape_options::PictureShape, ProjectXML};
 
     #[test]
     fn it_deserializes_picture_shape() {

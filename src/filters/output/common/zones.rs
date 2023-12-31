@@ -60,7 +60,7 @@ pub enum ZoneCategory {
 mod test {
     use serde_xml_rs::from_str;
 
-    use crate::project::{filters::output::common::zones::Property, ProjectXML};
+    use crate::{filters::output::common::zones::Property, ProjectXML};
 
     #[test]
     fn it_deserializes_property() {

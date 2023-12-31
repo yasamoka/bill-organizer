@@ -120,7 +120,7 @@ mod test {
     use serde_xml_rs::from_str;
     use validator::Validate;
 
-    use crate::project::{
+    use crate::{
         filters::select_content::{ContentDetectionMode, Page, PageDetectionMode},
         ProjectXML,
     };

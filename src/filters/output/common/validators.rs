@@ -11,7 +11,7 @@ mod test {
     use serde_xml_rs::from_str;
     use validator::Validate;
 
-    use crate::project::ProjectXML;
+    use crate::ProjectXML;
 
     #[test]
     fn it_validates_despeckle_level() {

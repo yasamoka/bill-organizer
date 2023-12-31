@@ -1,12 +1,12 @@
-mod color_params;
-mod dewarping_options;
-mod distortion_model;
-mod fill_zones;
-mod picture_shape_options;
-mod processing_params;
-mod splitting;
-mod validators;
-mod zones;
+pub mod color_params;
+pub mod dewarping_options;
+pub mod distortion_model;
+pub mod fill_zones;
+pub mod picture_shape_options;
+pub mod processing_params;
+pub mod splitting;
+pub mod validators;
+pub mod zones;
 
 pub use color_params::{ColorMode, ColorParams};
 pub use dewarping_options::{DewarpingMode, DewarpingOptions};

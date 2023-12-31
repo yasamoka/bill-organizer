@@ -46,7 +46,7 @@ mod test {
     use serde_xml_rs::from_str;
     use validator::Validate;
 
-    use crate::project::{
+    use crate::{
         filters::common::{NonNegativeRegionRect, Rect},
         ProjectXML,
     };

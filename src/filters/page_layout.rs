@@ -2,7 +2,7 @@ use serde::{Deserialize, Serialize};
 use serde_with::{serde_as, BoolFromInt};
 use validator::Validate;
 
-use crate::project::common::FloatSize;
+use crate::common::FloatSize;
 
 use super::common::{NonNegativeRegionRect, Rect};
 
@@ -110,7 +110,7 @@ mod test {
     use serde_xml_rs::from_str;
     use validator::Validate;
 
-    use crate::project::{
+    use crate::{
         filters::page_layout::{HorizontalAlignment, VerticalAlignment},
         ProjectXML,
     };

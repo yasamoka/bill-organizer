@@ -43,7 +43,7 @@ pub enum Degrees {
 mod test {
     use serde_xml_rs::from_str;
 
-    use crate::project::{filters::fix_orientation::Degrees, ProjectXML};
+    use crate::{filters::fix_orientation::Degrees, ProjectXML};
 
     #[test]
     fn it_deserializes_no_rotation() {
